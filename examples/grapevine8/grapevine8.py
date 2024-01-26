@@ -92,7 +92,7 @@ class ExternalFunction:
                     tgt_loc = int(state[f'shared-{tgt_index}'])
 
                 # agent should know their own secret before sharing
-                if tgt_index == agt_index:
+                if tgt_index == agt_index and  tgt_loc == 0:
                     return PDDL_TERNARY.TRUE
                 
                 # if the secret has not been shared
